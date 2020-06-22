@@ -151,5 +151,7 @@ The project provides a data file with data pre-loaded, it contains transactions 
 The file name is "ClipDataPreLoaded.txt" in order to use it just rename the file to "ClipData.txt"										
 
 
-Enjoy!
+any question or comment send email to larsdesagitario@gmail.com
+
+Thanks
 
