@@ -23,7 +23,10 @@ Please clone the repository by executing the following command on a terminal:
 	1.- move to the application forlder:
     	cd luis-ramirez-sample-java-test/clip-transaction-api/
     
-    2.- start app (dependencies will be downloaded)
+    2.- run tests
+    	mvn test
+    
+    3.- start app (dependencies will be downloaded)
     	a) directly 
     		mvn spring-boot:run
     	

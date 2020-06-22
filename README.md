@@ -23,7 +23,10 @@ Please clone the repository by executing the following command on a terminal:
 	1.- move to the application forlder:
     	cd luis-ramirez-sample-java-test/clip-transaction-api/
     
-    2.- start app (dependencies will be downloaded)
+    2.- run tests
+    	mvn test
+    
+    3.- start app (dependencies will be downloaded)
     	a) directly 
     		mvn spring-boot:run
     	
@@ -149,6 +152,7 @@ if you request any other action and the file is not created yet, you will see an
 
 The project provides a data file with data pre-loaded, it contains transactions to show the weekly report as the example provided on https://github.com/cesaralcancio/simple-test.
 The file name is "ClipDataPreLoaded.txt" in order to use it just rename the file to "ClipData.txt"										
+
 
 any question or comment send email to larsdesagitario@gmail.com
 
