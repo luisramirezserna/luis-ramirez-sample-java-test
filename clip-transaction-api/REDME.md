@@ -21,7 +21,7 @@ Please clone the repository by executing the following command on a terminal:
     
 # Run the application
 	1.- move to the application forlder:
-    	cd luis-ramirez-sample-java-test/
+    	cd luis-ramirez-sample-java-test/clip-transaction-api/
     
     2.- start app (dependencies will be downloaded)
     	a) directly 
