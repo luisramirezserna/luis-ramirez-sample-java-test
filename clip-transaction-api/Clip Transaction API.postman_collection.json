@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "3d1169c1-db7a-4ac1-b267-804c21db8ac9",
+		"name": "Clip Transaction API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"clipuser\",\n    \"password\" : \"clip@JWT02\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8181/clip/authenticate",
+				"description": "Authenticate to Clip Transaction API"
+			},
+			"response": []
+		},
+		{
+			"name": "ADD TRANSACTION",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjbGlwdXNlciIsImV4cCI6MTU5MjYxODgyNywiaWF0IjoxNTkyNjAwODI3fQ.sSte3vG560eJY4rb0nP4xEwr18C_XSIw1oiSBizrbiuzlRG6Jk9M0krA_D4_y0SnptLBCGn3m6hbYqqrSgc7QA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \n    \"amount\" : 100,\n    \"description\" : \"test description\",\n    \"date\" : \"2019-12-12\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8181/clip/transaction/add/12345",
+				"description": "this endpoint will allow you to add a transaction to the data file"
+			},
+			"response": []
+		},
+		{
+			"name": "SHOW TRANSACTION",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjbGlwdXNlciIsImV4cCI6MTU5MjYxODgyNywiaWF0IjoxNTkyNjAwODI3fQ.sSte3vG560eJY4rb0nP4xEwr18C_XSIw1oiSBizrbiuzlRG6Jk9M0krA_D4_y0SnptLBCGn3m6hbYqqrSgc7QA",
+						"type": "text"
+					}
+				],
+				"url": "localhost:8181/clip/transaction/get/12345/44edb3c4-60e6-4373-8c0f-bc47e3d110fc",
+				"description": "this endpoint will show you a transaction based on the user id and the transaction id provided previously when the transaction was added"
+			},
+			"response": []
+		},
+		{
+			"name": "LIST TRANSACTIONS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjbGlwdXNlciIsImV4cCI6MTU5MjYxODgyNywiaWF0IjoxNTkyNjAwODI3fQ.sSte3vG560eJY4rb0nP4xEwr18C_XSIw1oiSBizrbiuzlRG6Jk9M0krA_D4_y0SnptLBCGn3m6hbYqqrSgc7QA",
+						"type": "text"
+					}
+				],
+				"url": "localhost:8181/clip/transaction/get/12345",
+				"description": "this endpoint will show you the transaction list associated to the user id provided on the URL"
+			},
+			"response": []
+		},
+		{
+			"name": "SUM TRANSACTIONS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjbGlwdXNlciIsImV4cCI6MTU5MjYxODgyNywiaWF0IjoxNTkyNjAwODI3fQ.sSte3vG560eJY4rb0nP4xEwr18C_XSIw1oiSBizrbiuzlRG6Jk9M0krA_D4_y0SnptLBCGn3m6hbYqqrSgc7QA",
+						"type": "text"
+					}
+				],
+				"url": "localhost:8181/clip/transaction/get/sum/12345",
+				"description": "This endpoint will show you the sum for all the transaction amounts associated to the provided user id"
+			},
+			"response": []
+		},
+		{
+			"name": "TRANSACTIONS REPORT SERVICE",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjbGlwdXNlciIsImV4cCI6MTU5MjYxODgyNywiaWF0IjoxNTkyNjAwODI3fQ.sSte3vG560eJY4rb0nP4xEwr18C_XSIw1oiSBizrbiuzlRG6Jk9M0krA_D4_y0SnptLBCGn3m6hbYqqrSgc7QA",
+						"type": "text"
+					}
+				],
+				"url": "localhost:8181/clip/transaction/get/report/12345",
+				"description": "This endpoint will show you a report for all the transactions associated to the user id accumulated by week, the week starts on Friday and finishes on Thursday or if it is the first day of the month then it should start the next week"
+			},
+			"response": []
+		},
+		{
+			"name": "RANDMON SINGLE TRANSACTION",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjbGlwdXNlciIsImV4cCI6MTU5MjYxODgyNywiaWF0IjoxNTkyNjAwODI3fQ.sSte3vG560eJY4rb0nP4xEwr18C_XSIw1oiSBizrbiuzlRG6Jk9M0krA_D4_y0SnptLBCGn3m6hbYqqrSgc7QA",
+						"type": "text"
+					}
+				],
+				"url": "localhost:8181/clip/transaction/get/",
+				"description": "This endpoint will show you a random transaction associated to any user id"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
